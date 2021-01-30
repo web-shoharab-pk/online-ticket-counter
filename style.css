@@ -108,6 +108,8 @@ nav ul li a:hover, a.active{
     margin: 15px 5px 0px 0px;
     word-spacing: 10px;
     border: none;
+    cursor: pointer;
+    background-color: white;
 }
 .btn-style{
     display: block;
