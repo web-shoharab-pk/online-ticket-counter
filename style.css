@@ -125,3 +125,13 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* this code for mozila firefox browser */
+input[type=number] {
+    -moz-appearance: textfield;
+  }

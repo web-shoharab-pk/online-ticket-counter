@@ -5,6 +5,12 @@ document.getElementById('first-plus-button').addEventListener('click', function 
     const firstInput = parseInt(firstClassInput.value);
     firstClassInput.value = firstInput + 1;
 
+
+
+    // this code for manually input negative 
+    if (firstInput <= 0) {
+        firstClassInput.value = 1;
+    }
     totalCalculator()
 })
 
@@ -13,8 +19,10 @@ document.getElementById('first-minus-button').addEventListener('click', function
     const firstInput = parseInt(firstClassInput.value);
     firstClassInput.value = firstInput - 1;
 
-    if (firstClassInput.value <= 0) {
+    // this code for manually input negative 
+    if (firstInput <= 0) {
         firstClassInput.value = 0;
+        alert("you cann't input negative number")
     }
     totalCalculator()
 })
@@ -25,6 +33,11 @@ document.getElementById('economy-plus-button').addEventListener('click', functio
     const economyClassInput = document.getElementById('economy-class-input');
     const economyInput = parseInt(economyClassInput.value);
     economyClassInput.value = economyInput + 1;
+
+    // this code for manually input negative 
+    if (economyInput <= 0) {
+        economyClassInput.value = 1;
+    }
     totalCalculator()
 })
 
@@ -33,9 +46,11 @@ document.getElementById('economy-minus-button').addEventListener('click', functi
     const economyInput = parseInt(economyClassInput.value);
     economyClassInput.value = economyInput - 1;
 
-    if (economyClassInput.value <= 0) {
+    if (economyInput <= 0) {
         economyClassInput.value = 0;
+        alert("you cann't input negative number")
     }
+
     totalCalculator()
 })
 
@@ -54,6 +69,9 @@ function totalCalculator() {
     document.getElementById('sub-total').innerText = '$' + subTotal;
     document.getElementById('vat').innerText = '$' + totalTax;
     document.getElementById('total').innerText = '$' + totalAmount;
+
+
+
 }
 
 
@@ -67,3 +85,4 @@ document.getElementById('booking-button').addEventListener('click', function () 
     const totalTicket = economyInput + firstInput;
     alert('your total booking tecket : ' + totalTicket + '   first class ticket : ' + firstInput + '  econmony class : ' + economyInput + '  your total bill (VAT added) : ' + totalBill);
 })
+
